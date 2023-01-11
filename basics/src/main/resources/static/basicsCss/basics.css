@@ -1,0 +1,29 @@
+.container {
+    max-width:1200px;
+    margin: 0 auto;
+}
+.problemUl{
+        columns: 3;
+        -webkit-columns: 3;
+        -moz-columns: 3;
+        column-gap: 120px;
+ }
+.problemLi{
+    width: 50%;
+    margin-bottom: 80px;
+ }
+h1{
+    text-align:center;
+}
+h4{
+    text-align:center;
+}
+form{
+    text-align:center;
+}
+.row{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 100px;
+}

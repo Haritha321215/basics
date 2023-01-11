@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>BASICS</title>
+    <link rel="stylesheet" href="basicsCss/basics.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script type="text/javascript" src="basicsJS/basics.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-md bg-dark navbar-dark">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+        <a class="navbar-brand" href="#">BASICS</a>
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item">
+                <a class="nav-link disabled" th:href="@{'/home'}" tabindex="-1" aria-disabled="true">Home</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link disabled" th:href="@{'/addition'}" tabindex="-1" aria-disabled="true">Addition</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled" th:href="@{'/subtraction'}" tabindex="-1" aria-disabled="true">Subtraction</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Multiplication <span class="sr-only"></span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled" th:href="@{'/division'}" tabindex="-1" aria-disabled="true">Division</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<h4>Multiplication</h4>
+
+<form th:action="@{'/saveMulti'}" th:object= "${multiplication}" method="POST">
+    <div class="form-group">
+        <label th:for="number1NoOfDigits">Number Of Digits in Number1:</label>
+        <select name="number1NoOfDigits">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+        </select><br><br>
+        <label th:for="number2NoOfDigits">Number Of Digits in Number2:</label>
+        <select name="number2NoOfDigits">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+        </select><br><br>
+        <label th:for="numberOfProblems">Number of Problems:</label>
+        <select name="numberOfProblems">
+            <option value="20">20</option>
+            <option value="30">30</option>
+        </select><br><br>
+
+    </div>
+
+    <div class ="box-footer">
+        <button type="submit" class="btn btn-primary">
+            Submit
+        </button>
+
+    </div>
+</form>
+</body>
+</html>
